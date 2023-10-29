@@ -5,6 +5,8 @@ VisualStudioVersion = 17.3.32901.215
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibraryGenTree", "ClassLibraryGenTree\ClassLibraryGenTree.csproj", "{2B63F72B-71A7-409B-B75C-5E119AAA2FA6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibraryGenTreeTests", "ClassLibraryGenTreeTests\ClassLibraryGenTreeTests.csproj", "{0EE3450F-7B5C-4F41-A65B-82FCCBC4C388}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{2B63F72B-71A7-409B-B75C-5E119AAA2FA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2B63F72B-71A7-409B-B75C-5E119AAA2FA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2B63F72B-71A7-409B-B75C-5E119AAA2FA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0EE3450F-7B5C-4F41-A65B-82FCCBC4C388}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EE3450F-7B5C-4F41-A65B-82FCCBC4C388}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EE3450F-7B5C-4F41-A65B-82FCCBC4C388}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EE3450F-7B5C-4F41-A65B-82FCCBC4C388}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
