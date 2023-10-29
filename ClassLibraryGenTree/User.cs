@@ -15,6 +15,7 @@ namespace ClassLibraryGenTree
     public class User
     {
         // declarate variables
+        private string id;
         private string username;
         private string first_name;
         private string last_name;
@@ -25,8 +26,9 @@ namespace ClassLibraryGenTree
         private DateTime updatedAt;
 
         // create constructor
-        public User(string username, string first_name, string last_name, string email, string password, Role role)
+        public User(string id, string username, string first_name, string last_name, string email, string password, Role role)
         {
+            this.Id = id;
             this.Username = username;
             this.First_name = first_name;
             this.Last_name = last_name;
@@ -37,6 +39,11 @@ namespace ClassLibraryGenTree
         }
 
         // create setters and getters
+        public string Id
+        {
+            get => id;
+            set => id = value;
+        }
         public string Username
         {
             get => username; 
@@ -119,5 +126,16 @@ namespace ClassLibraryGenTree
             }
         }
         public DateTime AccessedAt { get; set; }
+
+        public override bool Equals(object obj)
+        {
+            return obj is User user &&
+                   id == user.id;
+        }
+
+        public override int GetHashCode()
+        {
+            return 1877310944 + EqualityComparer<string>.Default.GetHashCode(id);
+        }
     }
 }
