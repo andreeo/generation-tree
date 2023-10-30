@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibraryGenTree", "Clas
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibraryGenTreeTests", "ClassLibraryGenTreeTests\ClassLibraryGenTreeTests.csproj", "{0EE3450F-7B5C-4F41-A65B-82FCCBC4C388}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interfaces", "Interfaces\Interfaces.csproj", "{D5BF3338-C69B-467F-BE48-4C344EFF8966}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{D1E88887-C0B8-4E41-945B-7200F81EF023}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{0EE3450F-7B5C-4F41-A65B-82FCCBC4C388}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0EE3450F-7B5C-4F41-A65B-82FCCBC4C388}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0EE3450F-7B5C-4F41-A65B-82FCCBC4C388}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5BF3338-C69B-467F-BE48-4C344EFF8966}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5BF3338-C69B-467F-BE48-4C344EFF8966}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5BF3338-C69B-467F-BE48-4C344EFF8966}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5BF3338-C69B-467F-BE48-4C344EFF8966}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1E88887-C0B8-4E41-945B-7200F81EF023}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1E88887-C0B8-4E41-945B-7200F81EF023}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1E88887-C0B8-4E41-945B-7200F81EF023}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1E88887-C0B8-4E41-945B-7200F81EF023}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
