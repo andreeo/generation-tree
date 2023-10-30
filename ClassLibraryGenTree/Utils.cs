@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ClassLibraryGenTree
 {
-    internal class Utils
+    public class Utils
     {
         /// <summary>
         /// Encripta una cadena.

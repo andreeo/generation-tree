@@ -51,7 +51,7 @@ namespace ClassLibraryGenTree
         public string First_surname { get => this.first_surname; set => this.first_surname = value; }
         public string Second_surname { get => this.second_surname; set => this.second_surname = value; }
         public DateTime Birth_day { get => this.birth_day; set => this.birth_day = value; }
-        internal Person Father
+        public Person Father
         {
             get => this.father;
             set
@@ -82,7 +82,7 @@ namespace ClassLibraryGenTree
                 }
             }
         }
-        internal Person Mother
+        public Person Mother
         {
             get => this.mother;
             set
