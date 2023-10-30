@@ -38,6 +38,17 @@ namespace ClassLibraryGenTree.Tests
             Assert.AreEqual(u.Role, Role.ADMINISTRATOR);
         }
 
+
+        [TestMethod()]
+        [ExpectedException(typeof(Exception), "An email is invalid.")]
+        public void ShouldThrowWhenUserSetInvalidMailTest()
+        {
+            User u = new User("1", "fakeUserName", "fakeFirstName", "fakeLastName", "test@test.com", "strongSecurePassword", Role.USER);
+
+            u.Email = "notAnEmail";
+
+        }
+
         [TestMethod()]
         public void EqualsTest()
         {

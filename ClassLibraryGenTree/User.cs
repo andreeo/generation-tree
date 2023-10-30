@@ -109,8 +109,6 @@ namespace ClassLibraryGenTree
             }
         }
 
-        public DateTime AccessedAt { get; set; }
-
         public override bool Equals(object obj)
         {
             return obj is User user &&
