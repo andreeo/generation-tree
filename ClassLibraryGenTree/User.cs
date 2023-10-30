@@ -1,4 +1,5 @@
 ﻿using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,8 +23,7 @@ namespace ClassLibraryGenTree
         private string email;
         private string password;
         private Role role;
-        private DateTime createdAt;
-        private DateTime updatedAt;
+
 
         // create constructor
         public User(string id, string username, string first_name, string last_name, string email, string password, Role role)
@@ -35,7 +35,7 @@ namespace ClassLibraryGenTree
             this.Email = email;
             this.Password = Utils.Encriptar(password);
             this.Role = role;
-            this.CreatedAt = DateTime.Now;
+
         }
 
         // create setters and getters
@@ -46,12 +46,12 @@ namespace ClassLibraryGenTree
         }
         public string Username
         {
-            get => username; 
+            get => username;
             set
-            { 
+            {
                 username = value;
-                this.UpdatedAt = DateTime.Now;
-            } 
+
+            }
         }
         public string First_name
         {
@@ -59,33 +59,32 @@ namespace ClassLibraryGenTree
             set
             {
                 first_name = value;
-                this.UpdatedAt = DateTime.Now;
             }
         }
         public string Last_name
-        { 
-            get => last_name; 
-            set 
+        {
+            get => last_name;
+            set
             {
                 last_name = value;
-                this.UpdatedAt = DateTime.Now;
-            } 
+
+            }
         }
         public string Email
-        { 
+        {
             get => email;
             set
             {
                 try
                 {
-                    if(!Utils.EsEMail(email))
+                    if (!Utils.EsEMail(value))
                     {
                         throw new Exception("Email inválido");
                     }
                     email = value;
-                    this.UpdatedAt = DateTime.Now;
+
                 }
-                catch(Exception err)
+                catch (Exception err)
                 {
                     throw err;
                 }
@@ -97,34 +96,19 @@ namespace ClassLibraryGenTree
             set
             {
                 password = value;
-                this.UpdatedAt = DateTime.Now;
+
             }
         }
         public Role Role
         {
             get => role;
-            set 
+            set
             {
                 role = value;
-                this.UpdatedAt = DateTime.Now;
+
             }
         }
-        public DateTime CreatedAt
-        { 
-            get => createdAt;
-            set {
-                createdAt = value;
-                this.UpdatedAt = DateTime.Now;
-            }
-        }
-        public DateTime UpdatedAt
-        { 
-            get => updatedAt; 
-            set {
-                updatedAt = value;
-                this.UpdatedAt = DateTime.Now;
-            }
-        }
+
         public DateTime AccessedAt { get; set; }
 
         public override bool Equals(object obj)
