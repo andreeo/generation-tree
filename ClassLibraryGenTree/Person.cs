@@ -7,10 +7,10 @@ namespace ClassLibraryGenTree
     {
         // declarate variables
         private string id;
-        private string first_name = "";
-        private string second_name = "";
-        private string first_surname = "";
-        private string second_surname = "";
+        private string first_name;
+        private string second_name;
+        private string first_surname;
+        private string second_surname;
         private DateTime birth_day;
         private Person father;
         private Person mother;
@@ -29,21 +29,6 @@ namespace ClassLibraryGenTree
             this.birth_day = birth_day;
         }
 
-        public Person(
-            string id, string first_name, string second_name, string first_surname,
-            string second_surname, DateTime birth_day, Person father, Person mother
-            )
-        {
-            this.id = id;
-            this.first_name = first_name;
-            this.second_name = second_name;
-            this.first_surname = first_surname;
-            this.second_surname = second_surname;
-            this.birth_day = birth_day;
-            this.father = father;
-            this.mother = mother;
-        }
-
         // getters and setters
         public string Id { get => this.id; set => this.id = value; }
         public string First_name { get => this.first_name; set => this.first_name = value; }
@@ -56,29 +41,23 @@ namespace ClassLibraryGenTree
             get => this.father;
             set
             {
-                try
+
+                if (value != null)
                 {
-                    if (value != null)
-                    {
-                        if (
-                            value.Birth_day.Year < this.Birth_day.Year &&
-                            (this.Birth_day.Year - value.Birth_day.Year) >= 12)
-                        {
-                            father = value;
-                        }
-                        else
-                        {
-                            throw new ApplicationException("No se cumple la restricción para ser ancestro");
-                        }
-                    }
-                    else // if father is null
+                    if (
+                        value.Birth_day.Year < this.Birth_day.Year &&
+                        (this.Birth_day.Year - value.Birth_day.Year) >= 12)
                     {
                         father = value;
                     }
+                    else
+                    {
+                        throw new ApplicationException("No se cumple la restricción para ser ancestro");
+                    }
                 }
-                catch (Exception err)
+                else 
                 {
-                    Console.WriteLine(err);
+                    throw new ApplicationException("No se puede asignar un acestro null");
                 }
             }
         }
@@ -87,31 +66,26 @@ namespace ClassLibraryGenTree
             get => this.mother;
             set
             {
-                try
+
+                if (value != null)
                 {
-                    if (value != null)
-                    {
-                        if (
-                            value.Birth_day.Year < this.Birth_day.Year &&
-                            (this.Birth_day.Year - value.Birth_day.Year) >= 12)
-                        {
-                            mother = value;
-                        }
-                        else
-                        {
-                            throw new ApplicationException("No se cumple la restricción para ser ancestro");
-                        }
-                    }
-                    else
+                    if (
+                        value.Birth_day.Year < this.Birth_day.Year &&
+                        (this.Birth_day.Year - value.Birth_day.Year) >= 12)
                     {
                         mother = value;
                     }
+                    else
+                    {
+                        throw new ApplicationException("No se cumple la restricción para ser ancestro");
+                    }
                 }
-                catch (Exception err)
+                else
                 {
-                    Console.WriteLine(err);
+                    throw new ApplicationException("No se puede asignar un acestro null");
                 }
             }
+
         }
 
         public override string ToString()
@@ -130,10 +104,11 @@ namespace ClassLibraryGenTree
 
         static void GetGenTreeRecursive(Person person, List<Person> genTree)
         {
-            genTree.Add(person);
+
 
             if (person != null)
             {
+                genTree.Add(person);
                 GetGenTreeRecursive(person.Father, genTree);
                 GetGenTreeRecursive(person.Mother, genTree);
             }

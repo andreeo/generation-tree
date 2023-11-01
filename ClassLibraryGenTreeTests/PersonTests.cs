@@ -56,9 +56,45 @@ namespace ClassLibraryGenTree.Tests
             Person father = new Person("1", "fatherFistName", "fatherSecondName", "fatherFirstSurname", "fathersecondSurname", new DateTime(1980, 12, 25));
             Person mother = new Person("1", "motherFistName", "motherSecondName", "motherFirstSurname", "motherSecondSurname", new DateTime(1987, 12, 25));
 
-            Person person = new Person("1", "fistName", "secondName", "firstSurname", "secondSurname", new DateTime(2020, 12, 25), father, mother);
+            Person person = new Person("1", "fistName", "secondName", "firstSurname", "secondSurname", new DateTime(2020, 12, 25));
+            person.Mother = mother;
+            person.Father = father;
             List<Person> tree = person.GetGenTree();
-            Assert.IsTrue(tree.Count == 1);
+            Assert.IsTrue(tree.Count == 3);
+        }
+
+        [TestMethod()]
+        [ExpectedException(typeof(ApplicationException), "Mother is invalid.")]
+        public void ShouldThrowWhenMotherIsTooYoung()
+        {
+            Person mother = new Person("1", "motherFistName", "motherSecondName", "motherFirstSurname", "motherSecondSurname", new DateTime(2018, 12, 25));
+            Person person = new Person("1", "fistName", "secondName", "firstSurname", "secondSurname", new DateTime(2020, 12, 25));
+            person.Mother = mother;
+        }
+
+        [TestMethod()]
+        [ExpectedException(typeof(ApplicationException), "Father is invalid.")]
+        public void ShouldThrowWhenFatherIsInvalidBirdDate()
+        {
+            Person father = new Person("1", "fatherFistName", "fatherSecondName", "fatherFirstSurname", "fathersecondSurname", new DateTime(2023, 12, 25));
+            Person person = new Person("1", "fistName", "secondName", "firstSurname", "secondSurname", new DateTime(2020, 12, 25));
+            person.Father = father;
+        }
+
+        [TestMethod()]
+        [ExpectedException(typeof(ApplicationException), "Father is invalid.")]
+        public void ShouldThrowWhenFatherIsSetToNull()
+        {
+            Person person = new Person("1", "fistName", "secondName", "firstSurname", "secondSurname", new DateTime(2020, 12, 25));
+            person.Father = null;
+        }
+
+        [TestMethod()]
+        [ExpectedException(typeof(ApplicationException), "Mother is invalid.")]
+        public void ShouldThrowWhenMotherIsSetToNull()
+        {
+            Person person = new Person("1", "fistName", "secondName", "firstSurname", "secondSurname", new DateTime(2020, 12, 25));
+            person.Mother = null;
         }
     }
 }
