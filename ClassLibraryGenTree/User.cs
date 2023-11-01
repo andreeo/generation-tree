@@ -16,17 +16,18 @@ namespace ClassLibraryGenTree
     public class User
     {
         // declarate variables
-        private string id;
+        private int id;
         private string username;
         private string first_name;
         private string last_name;
         private string email;
         private string password;
         private Role role;
+        private bool isActive;
 
 
         // create constructor
-        public User(string id, string username, string first_name, string last_name, string email, string password, Role role)
+        public User(int id, string username, string first_name, string last_name, string email, string password, Role role, bool isActive)
         {
             this.Id = id;
             this.Username = username;
@@ -35,11 +36,11 @@ namespace ClassLibraryGenTree
             this.Email = email;
             this.Password = Utils.Encriptar(password);
             this.Role = role;
-
+            this.IsActive = isActive;
         }
 
         // create setters and getters
-        public string Id
+        public int Id
         {
             get => id;
             set => id = value;
@@ -109,6 +110,17 @@ namespace ClassLibraryGenTree
             }
         }
 
+        public bool IsActive { get => isActive; set => isActive = value; }
+
+        public bool IsValidPassword(string password)
+        {
+            if (this.password == Utils.Encriptar(password))
+            {
+                return true;
+            }
+            return false;
+        }
+
         public override bool Equals(object obj)
         {
             return obj is User user &&
@@ -117,7 +129,7 @@ namespace ClassLibraryGenTree
 
         public override int GetHashCode()
         {
-            return 1877310944 + EqualityComparer<string>.Default.GetHashCode(id);
+            return 1877310944 + EqualityComparer<int>.Default.GetHashCode(id);
         }
     }
 }

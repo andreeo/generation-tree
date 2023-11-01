@@ -7,8 +7,8 @@
     <ProjectGuid>{D1E88887-C0B8-4E41-945B-7200F81EF023}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Data</RootNamespace>
-    <AssemblyName>Data</AssemblyName>
+    <RootNamespace>DBLib</RootNamespace>
+    <AssemblyName>DBLib</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -41,17 +41,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DBPruebas.cs" />
+    <Compile Include="DB.cs" />
+    <Compile Include="IDB.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ClassLibraryGenTree\ClassLibraryGenTree.csproj">
       <Project>{2b63f72b-71a7-409b-b75c-5e119aaa2fa6}</Project>
       <Name>ClassLibraryGenTree</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Interfaces\Interfaces.csproj">
-      <Project>{d5bf3338-c69b-467f-be48-4c344eff8966}</Project>
-      <Name>Interfaces</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

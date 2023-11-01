@@ -6,7 +6,7 @@ namespace ClassLibraryGenTree
     public class Person
     {
         // declarate variables
-        private string id;
+        private int id;
         private string first_name;
         private string second_name;
         private string first_surname;
@@ -17,7 +17,7 @@ namespace ClassLibraryGenTree
 
         // constructors
         public Person(
-            string id, string first_name, string second_name, string first_surname,
+            int id, string first_name, string second_name, string first_surname,
             string second_surname, DateTime birth_day
             )
         {
@@ -30,7 +30,7 @@ namespace ClassLibraryGenTree
         }
 
         // getters and setters
-        public string Id { get => this.id; set => this.id = value; }
+        public int Id { get => this.id; set => this.id = value; }
         public string First_name { get => this.first_name; set => this.first_name = value; }
         public string Second_name { get => this.second_name; set => this.second_name = value; }
         public string First_surname { get => this.first_surname; set => this.first_surname = value; }
