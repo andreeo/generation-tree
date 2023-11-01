@@ -35,14 +35,20 @@ namespace www
 
         protected void btnSingUp_Click(object sender, EventArgs e)
         {
+            // borrar mensajes de error
+            lblEmailError.Visible = false;
+            lblErrorPassword.Visible = false;
+            lblError.Visible = false;
+
+
             string username = tbxUsername.Text.Trim();
             string email = tbxEmail.Text.Trim();
             string firstName = tbxFirstName.Text.Trim();
             string lastName = tbxLastName.Text.Trim();
             string password = tbxPassword.Text.Trim();
 
-            bool isValid = false;
-
+            // validaciones
+            bool isValid = true;
             if (!Utils.EsEMail(email)) {
                 lblEmailError.Text = "- El email debe ser del formato \"name@domai.com\"";
                 lblEmailError.ForeColor = Color.Red;
@@ -59,9 +65,13 @@ namespace www
             if (isValid)
             {
                 User newUser = new User(0, username, firstName, lastName, email, password, Role.USER, true);
-                db.GuardaUsuario(newUser);
-                Response.Redirect("Login.aspx");
-            }
+                bool saved = db.GuardaUsuario(newUser);
+                if (saved)
+                {
+                    Response.Redirect("Login.aspx");        
+                }
+                lblError.Text = "Ha ocurrido un error";
+              }
         }
     }
 }

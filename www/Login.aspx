@@ -10,6 +10,12 @@
         .auto-style1 {
             width: 100%;
         }
+        .auto-style2 {
+            width: 146px;
+        }
+        .auto-style3 {
+            width: 62px;
+        }
     </style>
 </head>
 <body>
@@ -17,29 +23,29 @@
         <div>
             <table class="auto-style1">
                 <tr>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
+                    <td class="auto-style3">&nbsp;</td>
+                    <td class="auto-style2">&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
-                    <td>&nbsp;</td>
+                    <td class="auto-style3">&nbsp;</td>
                     <td colspan="3" style="text-align: center">
                         <asp:Label ID="lblTitle" runat="server" Text="Inicio de sesion"></asp:Label>
                     </td>
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
+                    <td class="auto-style3">&nbsp;</td>
+                    <td class="auto-style2">&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
-                    <td>&nbsp;</td>
-                    <td>
+                    <td class="auto-style3">&nbsp;</td>
+                    <td class="auto-style2">
                         <asp:Label ID="lblEmail" runat="server" Text="Email:"></asp:Label>
                     </td>
                     <td>
@@ -49,8 +55,8 @@
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
-                    <td>&nbsp;</td>
-                    <td>
+                    <td class="auto-style3">&nbsp;</td>
+                    <td class="auto-style2">
                         <asp:Label ID="lblPassword" runat="server" Text="Password:"></asp:Label>
                     </td>
                     <td>
@@ -60,8 +66,8 @@
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
+                    <td class="auto-style3">&nbsp;</td>
+                    <td class="auto-style2">&nbsp;</td>
                     <td>
                         <asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="btnLogin_Click" />
                         <asp:Button ID="btnSingUp" runat="server" OnClick="btnSingUp_Click" Text="Registrarse" />
@@ -70,10 +76,10 @@
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
+                    <td class="auto-style3">&nbsp;</td>
+                    <td class="auto-style2">&nbsp;</td>
                     <td>
-                        <asp:Label ID="lblErrorMsg" runat="server" Text=" "></asp:Label>
+                        <asp:Label ID="lblErrorMsg" runat="server" Text="label" Visible ="false"></asp:Label>
                     </td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
