@@ -42,7 +42,7 @@ namespace www
                 ClassLibraryGenTree.User user = db.LeeUsuario(email);
                 Session["authenticatedUser"] = user;
                 Response.BufferOutput = true;
-                Response.Redirect("Principal.aspx");
+                Response.Redirect("Default.aspx");
             }
             else
             {
