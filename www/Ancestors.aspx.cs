@@ -34,7 +34,7 @@ namespace www
             {
                 foreach (Person p in db.LeePersonas())
                 {
-                    ddlPersons.Items.Add(new ListItem(p.First_name + " " + p.First_surname, ((int)p.Id).ToString()));
+                    ddlPersons.Items.Add(new ListItem(p.First_name + " " + p.First_surname + "; id= " + p.Id, ((int)p.Id).ToString()));
                 }
 
             }
@@ -48,7 +48,7 @@ namespace www
             lblError.Visible = true;
 
 
-            string depthTxt = tbxDepth.Text; // should be int // should be >=1
+            string depthTxt = tbxDepth.Text;
             int idPerson = Convert.ToInt32(ddlPersons.SelectedValue);
             int depth;
             if (Int32.TryParse(depthTxt, out depth))

@@ -149,7 +149,7 @@ namespace DBLib
                 {
                     // Agregar un nueva persona
                     p.Id = nextPersonId++;
-                    TBLPerson.Add(nextPersonId, p);
+                    TBLPerson.Add(p.Id, p);
 
                 }
 

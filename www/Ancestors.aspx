@@ -37,7 +37,7 @@
                 <tr>
                     <td class="auto-style1">&nbsp;</td>
                     <td class="auto-style1" colspan="2">
-                        <asp:Label ID="lblError" runat="server" ForeColor="Red" Text="error"></asp:Label>
+                        <asp:Label ID="lblError" runat="server" ForeColor="Red" Text="error" Visible="False"></asp:Label>
                     </td>
                     <td class="auto-style1">&nbsp;</td>
                     <td class="auto-style1">&nbsp;</td>
@@ -78,8 +78,7 @@
                 <tr>
                     <td>&nbsp;</td>
                     <td>
-                        <asp:Literal ID="LiteralTree" runat="server"></asp:Literal>
-                    </td>
+                        &nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
