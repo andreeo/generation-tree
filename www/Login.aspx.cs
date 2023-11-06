@@ -27,7 +27,7 @@ namespace www
             // si hay un usuario logeado redirigimos
             if (Session["authenticatedUser"] != null)
             {
-                Response.Redirect("Principal.aspx");
+                Response.Redirect("Default.aspx");
             }
 
         }

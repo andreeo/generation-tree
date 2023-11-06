@@ -1,4 +1,5 @@
-﻿using DBLib;
+﻿using ClassLibraryGenTree;
+using DBLib;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +12,8 @@ namespace www
     public partial class Default : System.Web.UI.Page
     {
         IDB db = null;
+        User authenticatedUser = null;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             db = (IDB)Session["db"]; // cargamos la base de datos desde la session
@@ -23,11 +26,39 @@ namespace www
                     Session["db"] = db;
                 }
             }
-     
-            if (Session["authenticatedUser"] == null)
+            authenticatedUser = (User)Session["authenticatedUser"];
+            if (authenticatedUser == null)
             {
-                Response.Redirect("Login.aspx");
+               Response.Redirect("Login.aspx");
             }
+            lblUser.Text = "Bienvenido: " + authenticatedUser.First_name + " " + authenticatedUser.Last_name + " <Rol: " + authenticatedUser.Role +">";
+
+        }
+
+        protected void LinkButtonSignOut_Click(object sender, EventArgs e)
+        {
+            Session["authenticatedUser"] = null;
+            Response.Redirect("Login.aspx");
+        }
+
+        protected void LinkButtonNewPerson_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("NewPerson.aspx");
+        }
+
+        protected void LinkButtonEditPerson_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void LinkButtonDeletePerson_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void LinkButtonAncestors_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
