@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBLib", "DBLib\DBLib.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBLibTests", "DBLibTests\DBLibTests.csproj", "{E8F6D994-78F3-467E-B474-0E3CA2F9F78B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "wwwTest", "wwwTest\wwwTest.csproj", "{11E08ABF-9EB3-4A0E-9327-6DAE10E4A4E4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{E8F6D994-78F3-467E-B474-0E3CA2F9F78B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E8F6D994-78F3-467E-B474-0E3CA2F9F78B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E8F6D994-78F3-467E-B474-0E3CA2F9F78B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11E08ABF-9EB3-4A0E-9327-6DAE10E4A4E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11E08ABF-9EB3-4A0E-9327-6DAE10E4A4E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11E08ABF-9EB3-4A0E-9327-6DAE10E4A4E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11E08ABF-9EB3-4A0E-9327-6DAE10E4A4E4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

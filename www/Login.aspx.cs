@@ -34,6 +34,8 @@ namespace www
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
+            lblErrorMsg.Text = "";
+            lblErrorMsg.Visible = false; 
             string email = tbxEmail.Text.Trim();
             string password = tbxPassword.Text.Trim();
 
@@ -48,6 +50,7 @@ namespace www
             {
                 lblErrorMsg.Text = "Error: Email / Password erroneos";
                 lblErrorMsg.ForeColor = Color.Red;
+                lblErrorMsg.Visible = true;
             }
         }
 

@@ -13,8 +13,6 @@ namespace www
     {
         IDB db = null;
 
-
-
         protected void Page_Load(object sender, EventArgs e)
         {
             db = (IDB)Session["db"]; // cargamos la base de datos desde la session
@@ -28,7 +26,7 @@ namespace www
                 }
             }
             // si hay un usuario logeado redirigimos
-            if (Session["authenticatedUser"] != null)
+            if (Session["authenticatedUser"] == null)
             {
                 Response.Redirect("Login.aspx");
             }
