@@ -11,7 +11,7 @@ namespace www
 {
 
 
-    public partial class SingUp
+    public partial class NewPerson
     {
 
         /// <summary>
@@ -33,129 +33,111 @@ namespace www
         protected global::System.Web.UI.WebControls.Label lblTitle;
 
         /// <summary>
-        /// Control lblUsername.
+        /// Control lblName.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblUsername;
+        protected global::System.Web.UI.WebControls.Label lblName;
 
         /// <summary>
-        /// Control tbxUsername.
+        /// Control tbxName.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbxUsername;
+        protected global::System.Web.UI.WebControls.TextBox tbxName;
 
         /// <summary>
-        /// Control lblEmail.
+        /// Control lblSecondName.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblEmail;
+        protected global::System.Web.UI.WebControls.Label lblSecondName;
 
         /// <summary>
-        /// Control tbxEmail.
+        /// Control tbxSecondName.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbxEmail;
+        protected global::System.Web.UI.WebControls.TextBox tbxSecondName;
 
         /// <summary>
-        /// Control lblFirstName.
+        /// Control lblSurname.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblFirstName;
+        protected global::System.Web.UI.WebControls.Label lblSurname;
 
         /// <summary>
-        /// Control tbxFirstName.
+        /// Control tbxSurname.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbxFirstName;
+        protected global::System.Web.UI.WebControls.TextBox tbxSurname;
 
         /// <summary>
-        /// Control lblLastName.
+        /// Control lblSecondSurname.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblLastName;
+        protected global::System.Web.UI.WebControls.Label lblSecondSurname;
 
         /// <summary>
-        /// Control tbxLastName.
+        /// Control tbxSecondSurname.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbxLastName;
+        protected global::System.Web.UI.WebControls.TextBox tbxSecondSurname;
 
         /// <summary>
-        /// Control lblPassword.
+        /// Control lblBirthDate.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPassword;
+        protected global::System.Web.UI.WebControls.Label lblBirthDate;
 
         /// <summary>
-        /// Control tbxPassword.
+        /// Control CalendarBrithDate.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbxPassword;
+        protected global::System.Web.UI.WebControls.Calendar CalendarBrithDate;
 
         /// <summary>
-        /// Control btnSingUp.
+        /// Control lblSave.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSingUp;
+        protected global::System.Web.UI.WebControls.Button lblSave;
 
         /// <summary>
-        /// Control lblEmailError.
+        /// Control lblErrors.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblEmailError;
-
-        /// <summary>
-        /// Control lblErrorPassword.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblErrorPassword;
-
-        /// <summary>
-        /// Control lblError.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblError;
+        protected global::System.Web.UI.WebControls.Label lblErrors;
     }
 }
