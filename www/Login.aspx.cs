@@ -54,9 +54,9 @@ namespace www
             }
         }
 
-        protected void btnSingUp_Click(object sender, EventArgs e)
+        protected void btnSignUp_Click(object sender, EventArgs e)
         {
-            Response.Redirect("SingUp.aspx");
+            Response.Redirect("SignUp.aspx");
         }
     }
 }

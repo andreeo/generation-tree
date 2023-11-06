@@ -11,7 +11,7 @@ namespace www
 {
 
 
-    public partial class SingUp
+    public partial class SignUp
     {
 
         /// <summary>
@@ -123,7 +123,7 @@ namespace www
         protected global::System.Web.UI.WebControls.TextBox tbxPassword;
 
         /// <summary>
-        /// Control btnSingUp.
+        /// Control btnSignUp.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.

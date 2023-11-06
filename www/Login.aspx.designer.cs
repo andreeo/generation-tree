@@ -78,7 +78,7 @@ namespace www
         protected global::System.Web.UI.WebControls.Button btnLogin;
 
         /// <summary>
-        /// Control btnSingUp.
+        /// Control btnSignUp.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.

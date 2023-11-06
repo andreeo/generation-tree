@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SignUp.aspx.cs" Inherits="www.SingUp" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SignUp.aspx.cs" Inherits="www.SignUp" %>
 
 <!DOCTYPE html>
 
@@ -130,7 +130,7 @@
                     <td class="auto-style2">&nbsp;</td>
                     <td class="auto-style3">&nbsp;</td>
                     <td>
-                        <asp:Button ID="btnSingUp" runat="server" OnClick="btnSingUp_Click" Text="Registrarse" />
+                        <asp:Button ID="btnSignUp" runat="server" OnClick="btnSignUp_Click" Text="Registrarse" />
                     </td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>

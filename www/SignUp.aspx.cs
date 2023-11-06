@@ -10,7 +10,7 @@ using System.Web.UI.WebControls;
 
 namespace www
 {
-    public partial class SingUp : System.Web.UI.Page
+    public partial class SignUp : System.Web.UI.Page
     {
         IDB db = null;
 
@@ -33,7 +33,7 @@ namespace www
             }
         }
 
-        protected void btnSingUp_Click(object sender, EventArgs e)
+        protected void btnSignUp_Click(object sender, EventArgs e)
         {
             // borrar mensajes de error
             lblEmailError.Visible = false;
