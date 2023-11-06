@@ -177,5 +177,10 @@ namespace DBLib
         {
             return TBLPerson.FirstOrDefault(idPersonKeypair => idPersonKeypair.Key == idPersona).Value;
         }
+
+        public List<Person> LeePersonas()
+        {
+            return TBLPerson.Values.ToList();
+        }
     }
 }

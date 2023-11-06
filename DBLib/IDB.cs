@@ -73,5 +73,7 @@ namespace DBLib
         /// <param name="altura">Altura máxima del árbol. (0 no hay límite)</param>
         /// <returns>Retorna un puntero al objeto buscado y a su árbol genealógico.</returns>
         Person Ancestros(int idPersona, int altura);
+
+        List<Person> LeePersonas();
     }
 }

@@ -1,13 +1,13 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using ClassLibraryGenTree;
+using DBLib;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ClassLibraryGenTree;
-using DBLib;
 
-namespace DBLib.Tests
+namespace DBLibTests
 {
     [TestClass()]
     public class DBTests
@@ -15,11 +15,12 @@ namespace DBLib.Tests
         [TestMethod()]
         public void SaveNewUserTest()
         {
+
             DB db = new DB();
             User u = new User(1, "fakeUserName", "fakeFirstName", "fakeLastName", "email@test.com", "strongSecurePassword", Role.USER, true);
 
             Assert.IsTrue(db.GuardaUsuario(u));
-        } 
+        }
 
         [TestMethod()]
         public void ShouldNotSaveNullUserTest()
@@ -137,6 +138,13 @@ namespace DBLib.Tests
             Assert.AreEqual(7, db.NumPersonas());
         }
 
-    }
+        [TestMethod()]
+        public void ReturnListOfPersons()
+        {
+            DB db = new DB();
+            var listPersons = db.LeePersonas();
+            Assert.AreEqual(7, listPersons.Count());
+        }
 
+    }
 }

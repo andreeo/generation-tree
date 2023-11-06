@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Ancestors.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="NewPerson.aspx" />
@@ -74,6 +75,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Ancestors.aspx.cs">
+      <DependentUpon>Ancestors.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ancestors.aspx.designer.cs">
+      <DependentUpon>Ancestors.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -121,8 +129,8 @@
       <Project>{2b63f72b-71a7-409b-b75c-5e119aaa2fa6}</Project>
       <Name>ClassLibraryGenTree</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Data\DBLib.csproj">
-      <Project>{d1e88887-c0b8-4e41-945b-7200f81ef023}</Project>
+    <ProjectReference Include="..\DBLib\DBLib.csproj">
+      <Project>{1F21ED7B-F0DE-4D48-A2F2-2D87521DE590}</Project>
       <Name>DBLib</Name>
     </ProjectReference>
   </ItemGroup>

@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7C115C9B-B077-4339-9FE2-7328AFED303E}</ProjectGuid>
+    <ProjectGuid>{E8F6D994-78F3-467E-B474-0E3CA2F9F78B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DBLibTests</RootNamespace>
@@ -66,8 +66,8 @@
       <Project>{2B63F72B-71A7-409B-B75C-5E119AAA2FA6}</Project>
       <Name>ClassLibraryGenTree</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Data\DBLib.csproj">
-      <Project>{D1E88887-C0B8-4E41-945B-7200F81EF023}</Project>
+    <ProjectReference Include="..\DBLib\DBLib.csproj">
+      <Project>{1F21ED7B-F0DE-4D48-A2F2-2D87521DE590}</Project>
       <Name>DBLib</Name>
     </ProjectReference>
   </ItemGroup>
