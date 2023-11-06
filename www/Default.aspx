@@ -10,6 +10,9 @@
         .auto-style1 {
             text-align: center;
         }
+        .auto-style2 {
+            height: 31px;
+        }
     </style>
 </head>
 <body>
@@ -59,24 +62,6 @@
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>
-                        <asp:LinkButton ID="LinkButtonEditPerson" runat="server" OnClick="LinkButtonEditPerson_Click">Editar Persona</asp:LinkButton>
-                    </td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>
-                        <asp:LinkButton ID="LinkButtonDeletePerson" runat="server" OnClick="LinkButtonDeletePerson_Click">Elimina Persona</asp:LinkButton>
-                    </td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>
                         <asp:LinkButton ID="LinkButtonAncestors" runat="server" OnClick="LinkButtonAncestors_Click">Ancestros</asp:LinkButton>
                     </td>
                     <td>&nbsp;</td>
@@ -85,14 +70,16 @@
                 <tr>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
-                    <td>&nbsp;</td>
+                    <td>
+                        &nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
-                    <td>&nbsp;</td>
+                    <td>
+                        &nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>
@@ -104,6 +91,21 @@
                     </td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="auto-style2"></td>
+                    <td class="auto-style2"></td>
+                    <td class="auto-style2">
+                        &nbsp;</td>
+                    <td class="auto-style2"></td>
+                    <td class="auto-style2"></td>
                 </tr>
                 <tr>
                     <td>&nbsp;</td>

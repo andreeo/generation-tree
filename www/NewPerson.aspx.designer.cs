@@ -114,13 +114,13 @@ namespace www
         protected global::System.Web.UI.WebControls.Label lblBirthDate;
 
         /// <summary>
-        /// Control CalendarBrithDate.
+        /// Control tbxBirhtDate.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Calendar CalendarBrithDate;
+        protected global::System.Web.UI.WebControls.TextBox tbxBirhtDate;
 
         /// <summary>
         /// Control lblSave.

@@ -84,7 +84,7 @@
                         <asp:Label ID="lblBirthDate" runat="server" Text="Fecha de Nacimiento"></asp:Label>
                     </td>
                     <td>
-                        <asp:Calendar ID="CalendarBrithDate" runat="server"></asp:Calendar>
+                        <asp:TextBox ID="tbxBirhtDate" runat="server"></asp:TextBox>
                     </td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>

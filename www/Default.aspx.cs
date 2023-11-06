@@ -46,19 +46,9 @@ namespace www
             Response.Redirect("NewPerson.aspx");
         }
 
-        protected void LinkButtonEditPerson_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void LinkButtonDeletePerson_Click(object sender, EventArgs e)
-        {
-
-        }
-
         protected void LinkButtonAncestors_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("Ancestors.aspx");
         }
     }
 }

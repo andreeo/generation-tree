@@ -45,7 +45,7 @@ namespace www
             string secondName = tbxSecondName.Text.Trim();
             string surname = tbxSurname.Text.Trim();
             string secondSurname = tbxSecondSurname.Text.Trim();
-            string birthDate = null;
+            string birthDateTxt = tbxBirhtDate.Text.Trim();
 
             // validaciones
             bool isValid = true;
@@ -63,11 +63,19 @@ namespace www
                 lblErrors.Visible = true;
                 isValid = false;
             }
+            DateTime birthDate;
+            if (!DateTime.TryParse(birthDateTxt, out birthDate))
+            {
+                lblErrors.Text += "- La fecha de nacimiento es invalida\n";
+                lblErrors.ForeColor = Color.Red;
+                lblErrors.Visible = true;
+                isValid = false;
+            }
 
 
             if (isValid)
             {
-                Person newPerson = new Person(0,firstName,secondName,surname,secondSurname,DateTime.Now);
+                Person newPerson = new Person(0,firstName,secondName,surname,secondSurname, birthDate);
                 bool saved = db.GuardaPersona(newPerson);
                 if (saved)
                 {
