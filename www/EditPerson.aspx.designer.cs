@@ -11,7 +11,7 @@ namespace www
 {
 
 
-    public partial class NewPerson
+    public partial class EditPerson
     {
 
         /// <summary>
@@ -31,6 +31,33 @@ namespace www
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblTitle;
+
+        /// <summary>
+        /// Control lblPersona.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblPersona;
+
+        /// <summary>
+        /// Control ddlSelectPerson.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlSelectPerson;
+
+        /// <summary>
+        /// Control btnSelectPerson.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSelectPerson;
 
         /// <summary>
         /// Control lblName.
@@ -114,22 +141,58 @@ namespace www
         protected global::System.Web.UI.WebControls.Label lblBirthDate;
 
         /// <summary>
-        /// Control tbxBirhtDate.
+        /// Control tbxBirthDate.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbxBirhtDate;
+        protected global::System.Web.UI.WebControls.TextBox tbxBirthDate;
 
         /// <summary>
-        /// Control lblSave.
+        /// Control lblMother.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button lblSave;
+        protected global::System.Web.UI.WebControls.Label lblMother;
+
+        /// <summary>
+        /// Control ddlMother.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlMother;
+
+        /// <summary>
+        /// Control lblFather.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblFather;
+
+        /// <summary>
+        /// Control ddlFather.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlFather;
+
+        /// <summary>
+        /// Control btnSave.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSave;
 
         /// <summary>
         /// Control btnCancel.
@@ -141,12 +204,12 @@ namespace www
         protected global::System.Web.UI.WebControls.Button btnCancel;
 
         /// <summary>
-        /// Control lblErrors.
+        /// Control lblError.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblErrors;
+        protected global::System.Web.UI.WebControls.Label lblError;
     }
 }

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="NewPerson.aspx.cs" Inherits="www.NewPerson" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="EditPerson.aspx.cs" Inherits="www.EditPerson" %>
 
 <!DOCTYPE html>
 
@@ -8,9 +8,6 @@
     <title></title>
     <style type="text/css">
         .auto-style1 {
-            height: 31px;
-        }
-        .auto-style2 {
             text-align: center;
         }
     </style>
@@ -21,9 +18,36 @@
             <table style="width:100%;">
                 <tr>
                     <td>&nbsp;</td>
-                    <td class="auto-style2" colspan="2">
-                        <asp:Label ID="lblTitle" runat="server" Text="Nueva Persona"></asp:Label>
+                    <td class="auto-style1" colspan="3">
+                        <asp:Label ID="lblTitle" runat="server" Text="Editar Persona"></asp:Label>
                     </td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>
+                        <asp:Label ID="lblPersona" runat="server" Text="Selecciona una Persona:"></asp:Label>
+                    </td>
+                    <td>
+                        <asp:DropDownList ID="ddlSelectPerson" runat="server">
+                        </asp:DropDownList>
+                    </td>
+                    <td>
+                        <asp:Button ID="btnSelectPerson" runat="server" OnClick="btnSelectPerson_Click" Text="Editar" />
+                    </td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>
@@ -40,7 +64,7 @@
                         <asp:Label ID="lblName" runat="server" Text="Nombre"></asp:Label>
                     </td>
                     <td>
-                        <asp:TextBox ID="tbxName" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="tbxName" runat="server" Enabled="False"></asp:TextBox>
                     </td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
@@ -51,29 +75,18 @@
                         <asp:Label ID="lblSecondName" runat="server" Text="Segundo Nombre"></asp:Label>
                     </td>
                     <td>
-                        <asp:TextBox ID="tbxSecondName" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="tbxSecondName" runat="server" Enabled="False"></asp:TextBox>
                     </td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
-                    <td class="auto-style1"></td>
-                    <td class="auto-style1">
+                    <td>&nbsp;</td>
+                    <td>
                         <asp:Label ID="lblSurname" runat="server" Text="Apellido"></asp:Label>
                     </td>
-                    <td class="auto-style1">
-                        <asp:TextBox ID="tbxSurname" runat="server"></asp:TextBox>
-                    </td>
-                    <td class="auto-style1"></td>
-                    <td class="auto-style1"></td>
-                </tr>
-                <tr>
-                    <td>&nbsp;</td>
                     <td>
-                        <asp:Label ID="lblSecondSurname" runat="server" Text="Segundo Apellido"></asp:Label>
-                    </td>
-                    <td>
-                        <asp:TextBox ID="tbxSecondSurname" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="tbxSurname" runat="server" Enabled="False"></asp:TextBox>
                     </td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
@@ -81,32 +94,60 @@
                 <tr>
                     <td>&nbsp;</td>
                     <td>
-                        <asp:Label ID="lblBirthDate" runat="server" Text="Fecha de Nacimiento"></asp:Label>
+                        <asp:Label ID="lblSecondSurname" runat="server" Text="Segundo apellido"></asp:Label>
                     </td>
                     <td>
-                        <asp:TextBox ID="tbxBirhtDate" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="tbxSecondSurname" runat="server" Enabled="False"></asp:TextBox>
                     </td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
                     <td>&nbsp;</td>
                     <td>
-                        <asp:Button ID="lblSave" runat="server" OnClick="lblSave_Click" Text="Guardar" />
+                        <asp:Label ID="lblBirthDate" runat="server" EnableViewState="False" Text="Fecha nacimiento"></asp:Label>
+                    </td>
+                    <td>
+                        <asp:TextBox ID="tbxBirthDate" runat="server" Enabled="False"></asp:TextBox>
+                    </td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>
+                        <asp:Label ID="lblMother" runat="server" Text="Madre"></asp:Label>
+                    </td>
+                    <td>
+                        <asp:DropDownList ID="ddlMother" runat="server" Enabled="False">
+                        </asp:DropDownList>
+                    </td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>
+                        <asp:Label ID="lblFather" runat="server" Text="Padre"></asp:Label>
+                    </td>
+                    <td>
+                        <asp:DropDownList ID="ddlFather" runat="server" Enabled="False">
+                        </asp:DropDownList>
+                    </td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>
+                        <asp:Button ID="btnSave" runat="server" Enabled="False" OnClick="btnSave_Click" Text="Guardar" />
                         <asp:Button ID="btnCancel" runat="server" OnClick="btnCancel_Click" Text="Cancelar" />
                     </td>
                     <td>&nbsp;</td>
@@ -114,17 +155,18 @@
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
-                    <td class="auto-style1"></td>
-                    <td class="auto-style1"></td>
-                    <td class="auto-style1"></td>
-                    <td class="auto-style1"></td>
-                    <td class="auto-style1"></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
                 </tr>
                 <tr>
                     <td>&nbsp;</td>
-                    <td colspan="2">
-                        <asp:Label ID="lblErrors" runat="server" ForeColor="#FF3300" Text="errors" Visible="False"></asp:Label>
+                    <td>
+                        <asp:Label ID="lblError" runat="server" ForeColor="Red" Text="Errors" Visible="False"></asp:Label>
                     </td>
+                    <td>&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>

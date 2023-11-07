@@ -35,7 +35,7 @@ namespace www
         protected void btnLogin_Click(object sender, EventArgs e)
         {
             lblErrorMsg.Text = "";
-            lblErrorMsg.Visible = false; 
+            lblErrorMsg.Visible = false;
             string email = tbxEmail.Text.Trim();
             string password = tbxPassword.Text.Trim();
 
@@ -44,7 +44,9 @@ namespace www
                 ClassLibraryGenTree.User user = db.LeeUsuario(email);
                 Session["authenticatedUser"] = user;
                 Response.BufferOutput = true;
+
                 Response.Redirect("Default.aspx");
+
             }
             else
             {

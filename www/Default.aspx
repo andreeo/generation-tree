@@ -53,7 +53,7 @@
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>
-                        <asp:LinkButton ID="LinkButtonNewPerson" runat="server" OnClick="LinkButtonNewPerson_Click">Nueva Persona</asp:LinkButton>
+                        <asp:LinkButton ID="LinkButtonAncestors" runat="server" OnClick="LinkButtonAncestors_Click">Consulta Ancestros</asp:LinkButton>
                     </td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
@@ -62,7 +62,7 @@
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>
-                        <asp:LinkButton ID="LinkButtonAncestors" runat="server" OnClick="LinkButtonAncestors_Click">Ancestros</asp:LinkButton>
+                        <asp:LinkButton ID="LinkButtonNewPerson" runat="server" OnClick="LinkButtonNewPerson_Click" Enabled="False" Visible="False">Nueva Persona</asp:LinkButton>
                     </td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
@@ -71,9 +71,18 @@
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>
+                        <asp:LinkButton ID="LinkButtonEditPerson" runat="server" Enabled="False" OnClick="LinkButtonEditPerson_Click" Visible="False">Editar persona</asp:LinkButton>
+                    </td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="auto-style2"></td>
+                    <td class="auto-style2"></td>
+                    <td class="auto-style2">
                         &nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
+                    <td class="auto-style2"></td>
+                    <td class="auto-style2"></td>
                 </tr>
                 <tr>
                     <td>&nbsp;</td>

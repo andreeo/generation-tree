@@ -69,6 +69,7 @@
   <ItemGroup>
     <Content Include="Ancestors.aspx" />
     <Content Include="Default.aspx" />
+    <Content Include="EditPerson.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="NewPerson.aspx" />
     <Content Include="SignUp.aspx" />
@@ -88,6 +89,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditPerson.aspx.cs">
+      <DependentUpon>EditPerson.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditPerson.aspx.designer.cs">
+      <DependentUpon>EditPerson.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>

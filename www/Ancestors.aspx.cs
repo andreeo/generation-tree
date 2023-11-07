@@ -111,5 +111,9 @@ namespace www
             BuildTreeView(motherNode, person.Mother, maxDepth, currentDepth + 1);
         }
 
+        protected void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Default.aspx");
+        }
     }
 }

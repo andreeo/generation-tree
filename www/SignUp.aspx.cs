@@ -36,10 +36,12 @@ namespace www
         protected void btnSignUp_Click(object sender, EventArgs e)
         {
             // borrar mensajes de error
-            lblEmailError.Visible = false;
-            lblErrorPassword.Visible = false;
+            lblError.Text = "";
             lblError.Visible = false;
-
+            lblEmailError.Text = "";
+            lblEmailError.Visible = false;
+            lblErrorPassword.Text = "";
+            lblErrorPassword.Visible = false;
 
             string username = tbxUsername.Text.Trim();
             string email = tbxEmail.Text.Trim();
@@ -49,29 +51,53 @@ namespace www
 
             // validaciones
             bool isValid = true;
-            if (!Utils.EsEMail(email)) {
-                lblEmailError.Text = "- El email debe ser del formato \"name@domai.com\"";
+            if (!Utils.EsEMail(email))
+            {
+                lblEmailError.Text += "- El email debe ser del formato \"name@domai.com\"";
                 lblEmailError.ForeColor = Color.Red;
                 lblEmailError.Visible = true;
                 isValid = false;
             }
-            if (password == null || password == "" || Utils.NivelComplejidad(password) < 3) {
+            if (password == null || password == "" || Utils.NivelComplejidad(password) < 3)
+            {
                 lblErrorPassword.Text = "- La password debe contener almenos 7 caracteres, mayusculas, numeros y simbolos";
-                lblErrorPassword.ForeColor = Color.Red; 
+                lblErrorPassword.ForeColor = Color.Red;
                 lblErrorPassword.Visible = true;
+                isValid = false;
+            }
+            if (firstName == null || firstName == "")
+            {
+                lblError.Text += "- El nombre es obligatorio";
+                lblError.ForeColor = Color.Red;
+                lblError.Visible = true;
+                isValid = false;
+            }
+            if (lastName == null || lastName == "")
+            {
+                lblError.Text += "- El apellido es obligatorio";
+                lblError.ForeColor = Color.Red;
+                lblError.Visible = true;
                 isValid = false;
             }
 
             if (isValid)
             {
                 User newUser = new User(0, username, firstName, lastName, email, password, Role.USER, true);
+
+                if (db.LeeUsuario(newUser.Email) != null)
+                {
+                    lblError.Text += "- El email introducido ya esta registrado";
+                    lblError.ForeColor = Color.Red;
+                    lblError.Visible = true;
+                    return;
+                }
                 bool saved = db.GuardaUsuario(newUser);
                 if (saved)
                 {
-                    Response.Redirect("Login.aspx");        
-                }
+                    Response.Redirect("Login.aspx");
+                }   
                 lblError.Text = "Ha ocurrido un error";
-              }
+            }
         }
     }
 }

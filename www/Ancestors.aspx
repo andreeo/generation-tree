@@ -58,6 +58,7 @@
                     </td>
                     <td class="auto-style1">
                         <asp:Button ID="btnSearch" runat="server" OnClick="btnSearch_Click" Text="Buscar" />
+                        <asp:Button ID="btnCancelar" runat="server" OnClick="btnCancelar_Click" Text="Cancelar" />
                     </td>
                 </tr>
                 <tr>

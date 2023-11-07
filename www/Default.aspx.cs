@@ -9,7 +9,7 @@ using System.Web.UI.WebControls;
 
 namespace www
 {
-    public partial class Default : System.Web.UI.Page
+    public partial class Default: System.Web.UI.Page
     {
         IDB db = null;
         User authenticatedUser = null;
@@ -31,7 +31,16 @@ namespace www
             {
                Response.Redirect("Login.aspx");
             }
-            lblUser.Text = "Bienvenido: " + authenticatedUser.First_name + " " + authenticatedUser.Last_name + " <Rol: " + authenticatedUser.Role +">";
+            if (authenticatedUser.Role == Role.ADMINISTRATOR || authenticatedUser.Role == Role.MANAGER) 
+            {
+                LinkButtonNewPerson.Enabled = true;
+                LinkButtonNewPerson.Visible = true;
+
+                LinkButtonEditPerson.Enabled = true;
+                LinkButtonEditPerson.Visible = true;
+            }
+
+            lblUser.Text = "Bienvenido: " + authenticatedUser.First_name + " " + authenticatedUser.Last_name + " -Rol: " + authenticatedUser.Role +"-";
 
         }
 
@@ -50,5 +59,11 @@ namespace www
         {
             Response.Redirect("Ancestors.aspx");
         }
+
+        protected void LinkButtonEditPerson_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("EditPerson.aspx");
+        }
+
     }
 }

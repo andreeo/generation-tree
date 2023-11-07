@@ -42,6 +42,15 @@ namespace www
         protected global::System.Web.UI.WebControls.Label lblUser;
 
         /// <summary>
+        /// Control LinkButtonAncestors.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton LinkButtonAncestors;
+
+        /// <summary>
         /// Control LinkButtonNewPerson.
         /// </summary>
         /// <remarks>
@@ -51,13 +60,13 @@ namespace www
         protected global::System.Web.UI.WebControls.LinkButton LinkButtonNewPerson;
 
         /// <summary>
-        /// Control LinkButtonAncestors.
+        /// Control LinkButtonEditPerson.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButtonAncestors;
+        protected global::System.Web.UI.WebControls.LinkButton LinkButtonEditPerson;
 
         /// <summary>
         /// Control LinkButtonSignOut.

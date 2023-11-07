@@ -84,5 +84,10 @@ namespace www
                 lblErrors.Text += "Ha ocurrido un error\n";
             }
         }
+
+        protected void btnCancel_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Default.aspx");
+        }
     }
 }
